@@ -15,6 +15,11 @@ import mainpageeli from "../pages_eli/Mainpage";
 //KLINTH
 import Indexklinth from "../srcklinth/pages/index";
 import contactUslklinth from "../srcklinth/pages/contactUs";
+
+//abe
+import Indexabe from "../srcabe/pages/index";
+import contactUsabe from "../srcabe/pages/contactUs";
+
 //ACE
 import Indexace from "../srcace/pages/";
 //MARCY
@@ -37,6 +42,9 @@ export default function RouterComponent() {
 
                     <Route component={Indexklinth} path="/indexklinth" />
                     <Route component={contactUslklinth} path="/contactusklinth" exact />
+
+                    <Route component={Indexabe} path="/indexabe" />
+                    <Route component={contactUsabe} path="/contactusabe" exact />
 
                     <Route component={Indexace} path="/indexace" exact />
 

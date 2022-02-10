@@ -14,7 +14,7 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleTheme, getTheme } from "../redux/actions/uiAction";
+
 
 import userImage from "../assets/img/user.jpg";
 import col1 from "../assets/img/col1.jpg";
@@ -38,7 +38,7 @@ const style = {
   },
 
   appbar: {
-    backgroundColor: (theme) => theme.palette.background.main,
+    backgroundColor: (theme) => theme.palette.background.default,
   },
 
   menuLink: {
@@ -131,38 +131,25 @@ export default function Index() {
   }, []);
   const dispatch = useDispatch();
   const ui = useSelector((state) => state.ui);
-  useEffect(() => {
-    dispatch(getTheme());
-  }, [dispatch]);
 
-  const _toggleTheme = () => {
-    dispatch(toggleTheme(!ui.isDarkMode));
-  };
 
   return (
     <Box sx={style.root}>
-      <AppBar position="fixed" sx={style.appbar}>
-        <Toolbar sx={{ padding: 2 }}>
+      <AppBar position="static" sx={style.appbar}>
+        <Toolbar>
           <Box component="span" sx={{ flexGrow: 1 }} />
-          <Link href="/index" underline="none">
+          <Link href="/indexabe" underline="none">
             <Typography color="textPrimary" sx={style.menuLink}>
               {" "}
               Portfolio{" "}
             </Typography>
           </Link>
-          <Link href="/contactus" underline="none">
+          <Link href="/contactusabe" underline="none">
             <Typography color="textPrimary" sx={style.menuLink}>
               Contact Us{" "}
             </Typography>
           </Link>
-          <IconButton
-            color="default"
-            sx={{ marginLeft: 2 }}
-            onClick={_toggleTheme}
-            component="span"
-          >
-            {ui.isDarkMode ? <Brightness7Icon /> : <Brightness2Icon />}
-          </IconButton>
+         
         </Toolbar>
       </AppBar>
 

@@ -14,7 +14,6 @@ import {
 
 import 'animate.css';
 import { useSelector, useDispatch } from "react-redux";
-import { toggleTheme, getTheme } from "../redux/actions/uiAction";
 
 
 import userImage from "../assets/img/user.jpg";
@@ -42,7 +41,7 @@ const style = {
   },
 
   appbar: {
-    backgroundColor: (theme) => theme.palette.background.main,
+    backgroundColor: (theme) => theme.palette.background.default,
   },
 
   menuLink: {
@@ -120,34 +119,21 @@ const style = {
 export default function Index() {
   const dispatch = useDispatch();
   const ui = useSelector((state) => state.ui);
-  useEffect(() => {
-    dispatch(getTheme());
-  }, [dispatch]);
-
-  const _toggleTheme = () => {
-    dispatch(toggleTheme(!ui.isDarkMode));
-  };
+  
 
   return (
     <Box sx={style.root}>
-     <AppBar position="fixed" sx={style.appbar}>
-        <Toolbar sx={{ padding: 2 }}>
+     <AppBar position="static" sx={style.appbar}>
+        <Toolbar>
         <Avatar src={userImage} sx={{height:"50px", width:"50px"}}  />
           <Box component="span" sx={{ flexGrow: 1 }} />
-          <Link href="/index" underline="none">
+          <Link href="/indexabe" underline="none">
             <Typography  color="textPrimary" sx={style.menuLink}> Portfolio </Typography>
           </Link>
-          <Link href="/contactus"  underline="none">
+          <Link href="/contactusabe"  underline="none">
             <Typography  color="textPrimary" sx={style.menuLink}>Contact Us </Typography>
           </Link>
-          <IconButton
-            color="default"
-            sx={{ marginLeft: 2, transition: "0.9s"}}
-            onClick={_toggleTheme}
-            component="span"
-          >
-            {ui.isDarkMode ? <Brightness7Icon /> : <Brightness2Icon />}
-          </IconButton>
+          
 
         </Toolbar>
       </AppBar>

@@ -130,9 +130,9 @@ export default function Home() {
         window.location.href = "/indexeli";
     }
 
-   /*  else{
+    if(localStorage.getItem("name")==="Nicolas, Klinth Vincent O"){
       window.location.href = "/indexabe";
-    } */
+  }
 
         // ...
       })

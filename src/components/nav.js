@@ -357,6 +357,10 @@ export default function Nav() {
         window.location.href = "/indexeli";
     }
 
+    if(localStorage.getItem("name")==="John Raphael Abejero"){
+      window.location.href = "/indexabe";
+  }
+
   /*   else{
       window.location.href = "/indexabe";
     } */
