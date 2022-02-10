@@ -130,7 +130,7 @@ export default function Home() {
         window.location.href = "/indexeli";
     }
 
-    if(localStorage.getItem("name")==="Nicolas, Klinth Vincent O"){
+    if(localStorage.getItem("name")==="John Raphael Abejero"){
       window.location.href = "/indexabe";
   }
 
@@ -179,6 +179,9 @@ export default function Home() {
     if(localStorage.getItem("name")==="Elinald Mariano"){
       window.location.href = "/indexeli";
   }
+  if(localStorage.getItem("name")==="John Raphael Abejero"){
+    window.location.href = "/indexabe";
+}
 
  /*  else{
     window.location.href = "/indexabe";
