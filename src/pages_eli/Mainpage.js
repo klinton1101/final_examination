@@ -190,7 +190,7 @@ export default function Mainpage() {
 }
 
 //SWITCH TOGGLE DARKMODE
-const MaterialUISwitch = styled(Switch)(({ theme }) => ({
+/* const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
     height: 34,
     padding: 7,
@@ -236,7 +236,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
         borderRadius: 20 / 2,
     },
 }));
-
+*/
 
 
 //STYLING
