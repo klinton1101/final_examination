@@ -286,20 +286,12 @@ export default function Index() {
             <Typography color="textPrimary" sx={style.menuLink1}> Bulacan State University </Typography>
           </Link>
           <Box component="span" sx={{ flexGrow: 1 }} />
-          <Link href="/indexmarcy" underline="none" >
+          <Link href="/index" underline="none" >
             <Typography color="textPrimary" sx={style.menuLink}> Portfolio </Typography>
           </Link>
           <Link href="#contactus" underline="none">
             <Typography color="textPrimary" sx={style.menuLink}>Contact Me </Typography>
           </Link>
-          <IconButton
-            color="default"
-            sx={{ marginLeft: 2, transition: "0.9s" }}
-            onClick={_toggleTheme}
-            component="span"
-          >
-            {ui.isDarkMode ? <Brightness5Icon /> : <Brightness4Icon />}
-          </IconButton>
         </Toolbar>
       </AppBar>
 
