@@ -58,9 +58,9 @@ export default function Index() {
       height: "80px",
     },
     titleLarge: {
-        fontSize: { xs: "1.8rem", sm: "2.3rem", md: 50 },
-        marginBottom: -1,
-      },
+      fontSize: { xs: "1.8rem", sm: "2.3rem", md: 50 },
+      marginBottom: -1,
+    },
     titleLarge2: {
       fontSize: { xs: "1.8rem", sm: "2.3rem", md: 50 },
       marginBottom: 2,
@@ -79,9 +79,9 @@ export default function Index() {
       width: "auto",
       marginBottom: "-20px",
     },
-    gridSpaceContact:{
-        marginBottom: 2,
-    }
+    gridSpaceContact: {
+      marginBottom: 2,
+    },
   };
 
   const dispatch = useDispatch();
@@ -91,16 +91,21 @@ export default function Index() {
   }, [dispatch]);
   const ui = useSelector((state) => state.ui);
 
-  const useDarkMode = () => {
+/*   const useDarkMode = () => {
     dispatch(toggleTheme(!ui.isDarkMode));
-  };
+  }; */
 
   return (
     <Box>
       <AppBar position="static" sx={style.appBar}>
         <Toolbar>
           <Box sx={{ flexGrow: 1 }} />
-          <img src={logo} style={{ height: 32, width: 110 }} className="logo"  alt="valalas"/>
+          <img
+            src={logo}
+            style={{ height: 32, width: 110 }}
+            className="logo"
+            alt="valalas"
+          />
           <Box sx={{ flexGrow: 3 }} className="appBarSpace" />
           <Link href="#about" underline="none">
             <Typography sx={style.menuLink}>about</Typography>
@@ -109,11 +114,11 @@ export default function Index() {
             <Typography sx={style.menuLink}>contact </Typography>
           </Link>
           <Box sx={{ flexGrow: 1 }} />
-          <Button onClick={useDarkMode}>
+{/*           <Button onClick={useDarkMode}>
             <MdDarkMode size={25} color="white" style={{ marginLeft: 20 }}>
               {" "}
             </MdDarkMode>
-          </Button>
+          </Button> */}
         </Toolbar>
       </AppBar>
 
@@ -145,7 +150,12 @@ export default function Index() {
             </Grid>
 
             <Grid sm item>
-              <img src={soloImg} sx={style.soloImg} className="soloImg" alt="solopic"></img>
+              <img
+                src={soloImg}
+                sx={style.soloImg}
+                className="soloImg"
+                alt="solopic"
+              ></img>
               <img src={alt} sx={style.alt} className="alt" alt="circle"></img>
             </Grid>
 
@@ -169,7 +179,7 @@ export default function Index() {
             </Grid>
           </Grid>
         </Paper>
-        <Box/>
+        <Box />
 
         <Box>
           <Paper sx={{ paddingTop: 10, paddingBottom: 10 }}>
@@ -197,8 +207,8 @@ export default function Index() {
                   </Typography>
                 </Box>
               </Grid>
-            
-              <Grid sm item >
+
+              <Grid sm item>
                 <Box sx={style.detail2Cont}>
                   <Typography sx={style.titleLarge}>contact. </Typography>
 
